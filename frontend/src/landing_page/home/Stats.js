@@ -1,0 +1,28 @@
+import React from 'react';
+
+function Stats() {
+    return ( 
+        <div className='container p-3'>
+            <div className='row p-3'>
+                <div className='col p-3'>
+                    <h1 className='fs-2 mb-5'>Trust with confidence</h1>
+                    <h2 className='fs-4'>Customer first always</h2>
+                    <p className='text-muted'>That's why 1.3+ crore customer trust Zerodha with ₹3.5+ lakh crore worth fo equity investments.</p>
+                    <h2 className='fs-4'>No spam or gimmicks</h2>
+                    <p className='text-muted'>No gimmicks spam, "gamification", or annoying push notifications, High quality apps that you use at your pace, the way you like. </p>
+                    <h2 className='fs-4'>The Zerodha Universe</h2>
+                    <p className='text-muted'>Not just an app, but a whole ecosystem. Our investments in 30+ fintech offer you tailored services specific to your needs.</p>
+                </div>
+                <div className='col p-5'>
+                    <img src='media/ecosystem.png' style={{width:"90%"}}/>
+                    <div className='text-center'>
+                        <a href='' className='mx-5' style={{textDecoration:"none"}}>Explore our products <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                        <a href='' className='mx-5' style={{textDecoration:"none"}}>Try kite demo <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default Stats;
