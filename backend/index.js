@@ -6,6 +6,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const {HoldingsModel} = require("./model/HoldingsModel");
 const {PositionModel} = require("./model/PositionModel");
+const {OrdersModel} = require("./model/OrdersModel");
 
 const PORT = process.env.PORT || 3002;
 const url = process.env.MONGODB_URL;
@@ -23,6 +24,19 @@ app.get('/allHoldings', async(req, res)=>{
 app.get('/allPositions', async(req, res)=>{
     let allPositions = await PositionModel.find({});
     res.json(allPositions);
+});
+
+app.post('/newOrder', async(req, res)=> {
+    console.log("data received", req.body);
+    let newOreder = new OrdersModel({
+        name: req.body.name,
+        qty: Number(req.body.qty),
+        price: Number(req.body.price),
+        mode: req.body.mode,
+    });
+
+    await newOreder.save();
+    res.send("Order Saved");
 });
 
 app.listen(3002, ()=> {
