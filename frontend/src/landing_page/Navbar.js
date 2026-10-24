@@ -31,6 +31,9 @@ function Navbar() {
                             <li class="nav-item">
                                <Link class="nav-link active" to="/support">Support</Link>
                             </li>
+                            <li class="nav-item">
+                               <Link class="nav-link active" to="/login">Login</Link>
+                            </li>
                         </ul>
                     </form>
                 </div>

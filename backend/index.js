@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 const {HoldingsModel} = require("./model/HoldingsModel");
 const {PositionModel} = require("./model/PositionModel");
 const {OrdersModel} = require("./model/OrdersModel");
+const authRoute = require("./routes/auth");
 
 const PORT = process.env.PORT || 3002;
 const url = process.env.MONGODB_URL;
@@ -15,6 +16,7 @@ const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use("/auth", authRoute);
 
 app.get('/allHoldings', async(req, res)=>{
     let allHoldings = await HoldingsModel.find({});

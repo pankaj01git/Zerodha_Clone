@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './index.css';
 import HomePage from './landing_page/home/Homepage';
 import Signup from './landing_page/signup/Signup';
+import Login from './landing_page/login/Login';
 import About from './landing_page/about/AboutPage';
 import Products from './landing_page/products/ProductPage';
 import Pricing from './landing_page/pricing/PricingPage';
@@ -23,6 +24,7 @@ root.render(
       <Route path="/products" element={<Products />} />
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/support" element={<Support />} />
+      <Route path="/login" element={<Login />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
     <Footer />
